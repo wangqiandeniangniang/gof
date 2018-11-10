@@ -16,12 +16,14 @@ public class Client {
         userArrayList.add(new User("张三", 30));
         userArrayList.add(new User("李四", 20));
         userArrayList.add(new User("王五", 10));
-        IUserSpecification userSpecification = new UserByAgeThan(20);
+        IUserSpecification userSpecification2 = new UserByNameLike("张%");
+        IUserSpecification userSpecification = new UserByAgeThan(10);
         //定义一个用户查询类
         UserProvider userProvider = new UserProvider(userArrayList);
+
         //打印出年龄大于20岁的用户
         System.out.println("=====年龄大于20岁的用户===");
-        for (User u : userProvider.findUser(userSpecification)) {
+        for (User u : userProvider.findUser(userSpecification.and(userSpecification2))) {
             System.out.println(u);
         }
     }

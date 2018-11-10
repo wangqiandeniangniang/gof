@@ -10,4 +10,13 @@ package com.example.demo.unit;
 public interface IUserSpecification {
     //候选者是否满足要求
     boolean isSatisfiedBy(User user);
+
+    // and 操作
+    IUserSpecification and(IUserSpecification specification);
+
+    // or 操作
+    IUserSpecification or(IUserSpecification specification);
+
+    //not操作
+    IUserSpecification not();
 }

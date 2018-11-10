@@ -7,7 +7,7 @@ package com.example.demo.unit;
  * @Date 2018/11/10 14:28
  * @Version 1.0
  **/
-public class UserByNameEqual implements IUserSpecification {
+public class UserByNameEqual extends CompositeSpecification {
 
     //基准名称
     private String name;

@@ -7,7 +7,7 @@ package com.example.demo.unit;
  * @Date 2018/11/10 14:37
  * @Version 1.0
  **/
-public class UserByNameLike implements IUserSpecification {
+public class UserByNameLike extends CompositeSpecification{
     //like的标记
     private final static String LIKE_FLAG = "%";
 
